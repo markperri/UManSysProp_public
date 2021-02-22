@@ -35,6 +35,8 @@ from math import ceil
 from itertools import chain, groupby
 from operator import itemgetter
 import pdb
+import re
+from openbabel import pybel
 
 from . import data
 

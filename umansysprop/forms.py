@@ -39,7 +39,7 @@ import decimal
 import itertools
 from collections import namedtuple
 
-import pybel
+from openbabel import pybel
 from flask import request
 from flask_wtf import Form as DeclarativeForm
 from wtforms.fields import (
@@ -108,7 +108,7 @@ def unpickle_molecule(s):
     return pybel.readstring(b'smi', s)
 def pickle_molecule(m):
     return unpickle_molecule, (str(m).strip().encode('ascii'),)
-copyreg.pickle(pybel.Molecule, pickle_molecule)
+#copyreg.pickle(pybel.Molecule, pickle_molecule)
 
 
 def smiles(s):

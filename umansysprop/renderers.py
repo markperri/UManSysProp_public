@@ -38,7 +38,7 @@ import tempfile
 import textwrap
 
 import xlsxwriter as xl
-import pybel
+from openbabel import pybel
 from flask import json
 
 from .zip import ZipFile, ZIP_DEFLATED
